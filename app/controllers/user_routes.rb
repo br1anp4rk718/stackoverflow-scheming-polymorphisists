@@ -14,12 +14,14 @@ end
 
 
 # login
-get "/users" do
-
+get "/login" do
  erb :login
 end
 
 post "/login" do
   @user = User.find_by(email: params[:email])
-  redirect '/questions'
+  if @user && @user.password == params[:password]
+    sessions[:user_id] = @user.id
+    redirect '/questions'
+  end
 end
