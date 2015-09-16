@@ -1,13 +1,16 @@
 <div id="questions">
-	<div id="questions-list-container">
-		
-			<ul>
-				<li>
-					<p><%= question.created_at %></p>
-					<h2><a href="/questions/<%= question.id %>"><%= question.title %></a></h2>
+  <div id="question-list-wrapper">
+    <% @questions.each do |question| %>
 
-				</li>
-			</ul> 
-	</div>
+    <ul class="question-list">
+      <li>
+        <h4><a href="/questions/<%= question.id %>"><%= question.title %></a></h4>
+        <a href='/question/<%= question.id %>/vote' class="up-vote-button">+</a>
+        <p id="vote_count">3</p>
+        <p><%= question.created_at %></h4>
+      </li>
+    </ul>
+    <% end %>
+  </div>
 </div>
 
