@@ -1,0 +1,15 @@
+#questions {
+ background-color: lightgrey;
+ width: 75%;
+ height: 160em;
+ margin: auto;
+ border-radius: 6px;
+ margin-top: 5em;
+};
+
+#questions-list-container {
+	background-color: black;
+	width: 60%;
+	height: 140em;
+	
+};
