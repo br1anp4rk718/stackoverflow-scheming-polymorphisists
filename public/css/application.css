@@ -7,9 +7,13 @@
  margin-top: 5em;
 };
 
-#questions-list-container {
+#questions-list-wrapper {
 	background-color: black;
 	width: 60%;
 	height: 140em;
-	
 };
+
+ul.question-list {
+  margin: 2em;
+  list-style: none;
+}

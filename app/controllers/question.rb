@@ -1,6 +1,12 @@
+
+
 get '/questions' do
-	# @questions = Question.all
+	@questions = Question.all
 	erb :index
+end
+
+get '/questions/:id' do
+
 end
 
 
