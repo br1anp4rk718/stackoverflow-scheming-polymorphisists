@@ -1,0 +1,20 @@
+<div class="questions">
+
+  <div id="question-ask-form">
+    <form
+  </div>
+  <div id="question-list-wrapper">
+    <% @questions.each do |question| %>
+
+    <ul class="question-list">
+      <li>
+        <h4><a href="/questions/<%= question.id %>"><%= question.title %></a></h4>
+        <a href='/question/<%= question.id %>/vote' class="question-up-vote-button">+</a>
+        <p id="question-vote-count">3</p>
+        <p><%= question.created_at %></h4>
+      </li>
+    </ul>
+    <% end %>
+  </div>
+</div>
+
