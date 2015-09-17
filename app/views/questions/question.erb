@@ -1,1 +1,31 @@
+<div class="questions">
 
+  <div id="question-title-wrapper">
+    <h4><%= @question.title %></h4>
+  </div>
+  <div id="question-body-wrapper">
+    <p><%= @question.body %></p>
+  </div>
+
+  <div id="answer-header-wrapper">
+    <h5>add # of answers</h5>
+  </div>
+
+  <div id="answer-list">
+    <% @answers.each do |answer| %>
+    <ul>
+      <li><%= answer.body %></li>
+    </ul>
+
+    <div id="add-new-answer">
+
+      <form method="post" action="/questions/<%= question.id %>/answers/<%= answers.id%>">
+        <h7>Your answer:</h7>
+        <textarea></textarea>
+        <input type="submit" value="add answer">
+      </form>
+    </div>
+
+  </div>
+
+</div>
